@@ -1,0 +1,30 @@
+All test passed for CRUD
+
+(venv) fatoumatadrammeh@Fatimahs-MacBook-Pro Full CRUD Implementation % python3 -m pytest -v
+============================ test session starts ============================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0 -- /Users/fatoumatadrammeh/Documents/Coding Temple Assignments/Full CRUD Implementation/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/fatoumatadrammeh/Documents/Coding Temple Assignments/Full CRUD Implementation
+plugins: anyio-4.12.1
+collected 11 items                                                          
+
+tests/test_students.py::test_create_student_success PASSED            [  9%]
+tests/test_students.py::test_create_student_invalid_gpa PASSED        [ 18%]
+tests/test_students.py::test_create_student_invalid_grade_level PASSED [ 27%]
+tests/test_students.py::test_list_students_empty PASSED               [ 36%]
+tests/test_students.py::test_list_students_with_data PASSED           [ 45%]
+tests/test_students.py::test_get_student_by_id_found PASSED           [ 54%]
+tests/test_students.py::test_get_student_by_id_not_found PASSED       [ 63%]
+tests/test_students.py::test_update_student_success PASSED            [ 72%]
+tests/test_students.py::test_update_student_not_found PASSED          [ 81%]
+tests/test_students.py::test_delete_student_success PASSED            [ 90%]
+tests/test_students.py::test_delete_student_not_found PASSED          [100%]
+
+============================= warnings summary ==============================
+app/schemas/student.py:37
+  /Users/fatoumatadrammeh/Documents/Coding Temple Assignments/Full CRUD Implementation/app/schemas/student.py:37: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'nullable'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+    is_enrolled: Optional[bool] = Field(default=True, nullable=False)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 11 passed, 1 warning in 0.10s =======================
+(venv) fatoumatadrammeh@Fatimahs-MacBook-Pro Full CRUD Implementation % 
